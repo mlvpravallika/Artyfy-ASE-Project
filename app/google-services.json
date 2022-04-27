@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "532911452220",
+    "firebase_url": "https://artgallery-7c8fc-default-rtdb.firebaseio.com",
+    "project_id": "artgallery-7c8fc",
+    "storage_bucket": "artgallery-7c8fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532911452220:android:3ccc62221885efc0db5339",
+        "android_client_info": {
+          "package_name": "com.gallery.art"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532911452220-2lve1q4h2hfs0g85kv3r93etup8a1t21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gallery.art",
+            "certificate_hash": "e8365a26e0be37177fdf85917defa2eb85f985e2"
+          }
+        },
+        {
+          "client_id": "532911452220-pn3puu367m46sk3pvd3c17u4t7tj65si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiwb4y4XjrAdSK1bEYvxt-umNj-wZy3GI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532911452220-pn3puu367m46sk3pvd3c17u4t7tj65si.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

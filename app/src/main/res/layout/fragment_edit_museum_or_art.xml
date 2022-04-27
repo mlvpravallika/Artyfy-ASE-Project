@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addArt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/museumName_et_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Name"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <AutoCompleteTextView
+            android:id="@+id/museumName_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/price_et_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Price"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/museumName_et_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/price_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:visibility="gone"
+        android:id="@+id/artist_et_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Artist Name"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/price_et_layout">
+
+        <AutoCompleteTextView
+            android:maxLines="1"
+            android:id="@+id/artist_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:imeOptions="actionDone"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_et_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="City"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/artist_et_layout">
+
+        <AutoCompleteTextView
+            android:maxLines="1"
+            android:id="@+id/city_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:imeOptions="actionDone"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/desc_et_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Description"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/city_et_layout">
+
+        <AutoCompleteTextView
+            android:gravity="top"
+            android:id="@+id/desc_et"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:imeOptions="actionDone"
+            android:padding="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/upForSaleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Up for Sale"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sellSwitch"
+        app:layout_constraintStart_toStartOf="@+id/museumName_et_layout"
+        app:layout_constraintTop_toTopOf="@+id/sellSwitch" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sellSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/museumName_et_layout"
+        app:layout_constraintTop_toBottomOf="@id/desc_et_layout" />
+
+    <androidx.constraintlayout.widget.Group
+        tools:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sellGroup"
+        app:constraint_referenced_ids="upForSaleTv,sellSwitch"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular"
+        android:indeterminate="true"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/addArtButton"
+        app:layout_constraintBottom_toBottomOf="@id/addArtButton"/>
+
+    <Button
+        app:layout_constraintVertical_chainStyle="packed"
+        android:id="@+id/addArtButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:text="Add"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_et_layout"
+        app:layout_constraintBottom_toTopOf="@id/deleteArt" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintVertical_bias="1"
+        android:id="@+id/deleteArt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Art"
+        android:textColor="#F44336"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/addArtButton"
+        app:layout_constraintStart_toStartOf="@id/addArtButton"
+        app:layout_constraintEnd_toEndOf="@id/addArtButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:visibility="gone"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:id="@+id/buyArtButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:text="Buy this Art"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_et_layout"
+        app:layout_constraintBottom_toTopOf="@id/deleteArt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
